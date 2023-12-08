@@ -1,26 +1,50 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<template >
+  <div id="app">
+  <work v-bind:works="works" @remove-all-works="removeAllWorks" @add-work="addWork"></work>
+</div> 
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import work from './components/work';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    work,
+  },
+  data(){
+    return{
+      works:[
+        {
+        id:1,
+        title:'Playing cricket',
+        status:true,
+        },
+        {
+        id:2,
+        title:'Watching TV',
+        status:false,
+        },
+        {
+        id:3,
+        title:'Chat with friends',
+        status:false,
+        },
+      ]
+    }
+  },
+  methods:{
+    addWork(newWork) {
+      this.works.push(newWork);
+    },
+    removeAllWorks() {
+      this.works = []; // Update the works data
+    },
+    
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>

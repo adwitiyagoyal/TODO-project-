@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font: 15px/1.4 "Poppins", sans-serif;
+    background:cyan;
+    color: #333;
+    text-align: center;
+  }
+
+  #app {
+    padding: 45px 0;
+  }
+
+  input{
+    width: 30%;
+    height: 25px;
+    font: 15px/1.4 "Poppins", sans-serif;
+    padding: 13px;
+    background:lightcyan;
+    color: #333;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    
+  }
+  button {
+    cursor: pointer;
+    color: #555;
+    
+  }
+  .main {
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow:
+  }
+
+  .items button {
+    background: none;
+    border: none;
+    color:black;
+    font-size: 18px;
+    
+    top: 50%;
+    right: 20px;
+    
+  }
+  
+
+  .clear {
+    
+    background: red;
+    border-radius: 10px;
+    padding: 8px;
+    
+  }
